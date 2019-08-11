@@ -1,0 +1,94 @@
+<!--Autores: Maria Alejandra Garzon 1667494-->
+<!--         Nelson Fernando Galeano 1561845 -->
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora</title>
+<!--Para Cargar el Archivo Estilos-->
+      <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+<div id="calcular">
+
+  <div class="calculadora-logs">
+    <span v-for="log in logs">{{ log }}</span>
+  </div>
+<!---->
+  <input type="string" class="calculadora-input" v-model="value" @keyup.enter="getResult()">
+
+<!--panel de numeros-->
+
+  <div class="calculadora-row">
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(7)">7</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(8)">8</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(9)">9</button>
+    </div>
+    <div class="calculadora-col">
+        <button class="calculadora-btn accent action" @click="addExpresion('+')">+</button>
+      </div> 
+  </div>
+
+  <div class="calculadora-row">
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(4)">4</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(5)">5</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(6)">6</button>
+    </div>
+    <div class="calculadora-col">
+        <button class="calculadora-btn accent action" @click="addExpresion('-')">-</button>
+    </div>
+  </div>
+
+  <div class="calculadora-row">
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(1)">1</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(2)">2</button>
+    </div>
+    <div class="calculadora-col">
+      <button class="calculadora-btn" @click="addExpresion(3)">3</button>
+    </div>
+    <div class="calculadora-col">
+        <button class="calculadora-btn accent action" @click="addExpresion('*')">*</button>
+    </div>
+  </div>
+
+  <div class="calculadora-row">
+    <div class="calculadora-col wide">
+      <button class="calculadora-btn" @click="addExpresion(0)">0</button>
+    </div>
+    <div class="calculadora-col">
+        <button class="calculadora-btn accent action" @click="getResult()">=</button>
+      </div>
+      <div class="calculadora-col">
+        <button class="calculadora-btn accent action" @click="addExpresion('/')">/</button>
+    </div>
+  </div>
+
+  <div class="calculadora-row">
+    <div class="calculadora-col">
+      <button class="calculadora-btn gray action" @click="del()">Borrar</button>
+    </div>   
+</div>
+</div>
+
+<!--Para cargar el archivo Vue-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.min.js'></script>
+    <script  src="vue.js"></script>
+</body>
+
+</html>

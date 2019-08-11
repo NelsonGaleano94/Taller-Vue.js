@@ -1,0 +1,101 @@
+/*Autores: Maria Alejandra Garzon 1667494
+           Nelson Fernando Galeano 1561845*/
+*, ::after, ::before {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    font-size: 10px;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #5D0303;
+  }
+  
+  #calcular {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    padding: 0;
+    max-width: 320px;
+    min-width: 320px;
+    flex-direction: column;
+    background-color: #2f2f31;
+  }
+  #calcular .calculadora-logs {
+    height: 80px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  #calcular .calculadora-logs:before {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+    content: '';
+    z-index: 5;
+    position: absolute;
+    background: linear-gradient(to bottom, #2f2f31, rgba(47, 47, 49, 0));
+  }
+  #calcular .calculadora-logs span {
+    color: #D4D4D2;
+    opacity: .75;
+    display: block;
+    font-size: .8rem;
+    text-align: right;
+    margin-top: .4rem;
+    line-height: 1;
+    font-weight: lighter;
+  }
+  #calcular .calculadora-input {
+    color: #D4D4D2;
+    width: 100%;
+    border: none;
+    padding: .8rem;
+    display: block;
+    font-size: 2.4rem;
+    background: none;
+    text-align: right;
+    font-weight: lighter;
+  }
+  #calcular .calculadora-input:focus, #calcular .calculadora-input:active {
+    outline: none;
+  }
+  #calcular .calculadora-row {
+    display: flex;
+    padding: 0;
+    justify-content: space-around;
+  }
+  #calcular .calculadora-row .calculadora-col {
+    flex: 1;
+    box-shadow: 0 0 0 1px #2f2f31;
+  }
+  #calcular .calculadora-row .calculadora-col.wide {
+    flex: 2;
+  }
+  #calcular .calculadora-btn {
+    width: 100%;
+    color: #D4D4D2;
+    border: none;
+    cursor: pointer;
+    padding: .8rem;
+    outline: none;
+    font-size: 1.6rem;
+    transition: all .3s ease-in-out;
+    font-weight: 200;
+    justify-content: center;
+    background-color: #616163;
+  }
+  #calcular .calculadora-btn.accent {
+    background-color: #A02A02;
+    color: #fff;
+  }
+  #calcular .calculadora-btn.gray {
+    background-color:#7C0D02;
+  }
